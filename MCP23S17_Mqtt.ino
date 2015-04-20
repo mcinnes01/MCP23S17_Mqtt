@@ -20,7 +20,7 @@ PubSubClient client(MQTT_SERVER, 1883, callback, ethClient);
 byte ip[]     = { 192, 168, 1, 23 };
 
 // MCP23S17 definition
-const uint8_t chipSelect = 4;
+const uint8_t chipSelect = 7;
 
 // Create an object for each chip
 // Bank 0 is address 0
@@ -145,5 +145,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       }
       //"{\"command\":{\"lightmode\": \"ON\", \"pinnumber\": 1}}"
     }
+    // Cleanup ready for the next command
+    aJson.deleteItem(root);
   }
 }
