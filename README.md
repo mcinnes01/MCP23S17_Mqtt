@@ -3,7 +3,7 @@ An arduino sketch for controlling an MCP23S17 GPIO expander using JSON messages 
 
 The idea of this sketch is to provide a simple way of controlling many pins on arduino remotely using simple Json commands.
 
-# This use the following libraries: 
+# This uses the following libraries: 
 
 Majenko MCP23S17: https://github.com/MajenkoLibraries/MCP23S17
 aJson: https://github.com/interactive-matter/aJson
